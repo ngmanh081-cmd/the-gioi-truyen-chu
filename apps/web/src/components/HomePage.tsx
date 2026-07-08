@@ -540,8 +540,8 @@ export function HomePage({
               </div>
             </section>
 
-            <section className="overflow-hidden rounded-lg border border-[#ee7ab5] bg-white shadow-paper">
-              <div className="bg-gradient-to-r from-[#e9489d] to-[#d41472] px-5 py-4 text-white">
+            <section className="overflow-hidden rounded-lg border border-[#d8c6a5] bg-white shadow-paper">
+              <div className="bg-gradient-to-r from-[#090806] via-[#4a3415] to-[#d8b35f] px-5 py-4 text-white">
                 <h2 className="flex items-center gap-2 text-xl font-bold">
                   <Gift size={19} />
                   {displayText("Top tặng quà")}
@@ -554,11 +554,11 @@ export function HomePage({
                     key={novel.id}
                     type="button"
                     onClick={() => onSelectNovel(novel.id)}
-                    className={`flex w-full items-center gap-3 rounded-md text-left transition hover:bg-[#fff0f7] ${
-                      index === 0 ? "border border-[#e9489d] bg-[#fff0f7] p-3 shadow-[0_14px_30px_rgba(217,20,114,0.2)]" : "p-2"
+                    className={`flex w-full items-center gap-3 rounded-md text-left transition hover:bg-[#fff7ed] ${
+                      index === 0 ? "border border-[#d8b35f] bg-[#fff7df] p-3 shadow-[0_14px_30px_rgba(216,179,95,0.18)]" : "p-2"
                     }`}
                   >
-                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#e9489d] text-sm font-bold text-white">
+                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#14110b] text-sm font-bold text-[#fff3c4] ring-1 ring-[#d8b35f]/60">
                       {index + 1}
                     </span>
                     <img
@@ -568,7 +568,7 @@ export function HomePage({
                     />
                     <div className="min-w-0 flex-1">
                       <p className="truncate font-semibold text-[#102238]">{displayText(novel.title)}</p>
-                      <p className="text-sm text-[#d41472]">{displayText(`${Math.round(parseViews(novel.views) / 2).toLocaleString("vi-VN")} gold`)}</p>
+                      <p className="text-sm text-[#9a6b20]">{displayText(`${Math.round(parseViews(novel.views) / 2).toLocaleString("vi-VN")} gold`)}</p>
                     </div>
                   </button>
                 ))}
@@ -602,8 +602,8 @@ export function HomePage({
               subtitle: "10 truyện được tặng quà nhiều trong tuần",
               icon: Gift,
               items: topGiftNovels,
-              header: "from-[#e9489d] to-[#d41472]",
-              accent: "text-[#d41472]",
+              header: "from-[#090806] via-[#4a3415] to-[#d8b35f]",
+              accent: "text-[#9a6b20]",
               metric: (novel: Novel) => `${Math.round(parseViews(novel.views) / 2).toLocaleString("vi-VN")} gold`
             }
           ].map(({ title, subtitle, icon: Icon, items, header, accent, metric }) => (
