@@ -1,0 +1,17 @@
+{
+  "name": "webdoctruyen",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @webdoctruyen/api & npm run dev --workspace @webdoctruyen/web",
+    "build": "npm run build --workspace @webdoctruyen/api && npm run build --workspace @webdoctruyen/web",
+    "typecheck": "npm run typecheck --workspace @webdoctruyen/api && npm run typecheck --workspace @webdoctruyen/web",
+    "prisma:generate": "npm run prisma:generate --workspace @webdoctruyen/api"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
